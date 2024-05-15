@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    const pakaian = [
+        {
+            nama: 'kaos',
+            harga: 50000
+        },
+        {
+            nama: 'celana panjang',
+            harga: 75000
+        },
+        {
+            nama: 'jaket',
+            harga: 150000
+        },
+    ]
+
+    const pakaianBaru = pakaian.map((item,index) => {
+        if (item.harga >= 100000) {
+            item['harga'] -= 15000
+        }
+
+        return item;
+    });
+
+    console.log(pakaianBaru)
+
+
+    const filterHarga = pakaianBaru.filter(item => {
+        return item.harga > 100000;
+    })
+
+    console.log (filterHarga)
+</script>
